@@ -1,0 +1,15 @@
+[submodule "packages/turahe/master-data"]
+	path = packages/turahe/master-data
+	url = git@github.com:turahe/master-data.git
+[submodule "packages/turahe/laravel-installer"]
+	path = packages/turahe/laravel-installer
+	url = git@github.com:turahe/laravel-installer.git
+[submodule "packages/turahe/laravel-likeable"]
+	path = packages/turahe/laravel-likeable
+	url = git@github.com:turahe/laravel-likeable.git
+[submodule "packages/turahe/laravel-counters"]
+	path = packages/turahe/laravel-counters
+	url = git@github.com:turahe/laravel-counters.git
+[submodule "packages/turahe/laravel-wallet"]
+	path = packages/turahe/laravel-wallet
+	url = git@github.com:turahe/wallet.git
