@@ -3,10 +3,9 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @modified    8/11/20, 9:34 PM
- *  @name          toko
- * @author         Wachid
- * @copyright      Copyright (c) 2019-2020.
+ * @modified    1/30/21, 3:18 PM
+ * @author         Nur Wachid
+ * @copyright      Copyright (c) 2021.
  */
 
 namespace App\Console\Commands;

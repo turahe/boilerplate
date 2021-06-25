@@ -1,4 +1,12 @@
 <?php
+/*
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @modified    6/25/21, 10:26 AM
+ * @author         Nur Wachid
+ * @copyright      Copyright (c) 2021.
+ */
 
 namespace App\Providers;
 
@@ -23,6 +31,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->registerService();
+
+    }
+
+    private function registerService()
+    {
         if (class_exists('Turahe\Counters\CountersServiceProvider')) {
             $this->app->register(\Turahe\Counters\CountersServiceProvider::class);
         }
@@ -35,7 +49,9 @@ class AppServiceProvider extends ServiceProvider
         if (class_exists('Turahe\Master\MasterServiceProvider')) {
             $this->app->register(\Turahe\Likeable\LikeableServiceProvider::class);
         }
-
+        if (class_exists('Turahe\Store\StoreServiceProvider')) {
+            $this->app->register(\Turahe\Store\StoreServiceProvider::class);
+        }
     }
 
     /**
@@ -45,7 +61,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $name = config('app.unique_id').'_installed';
         $filename = storage_path('app'.DIRECTORY_SEPARATOR.$name);
-        if (file_exists($filename) && class_exists('Turahe\LaravelInstaller\Providers\LaravelInstallerServiceProvider')) {
+        if (! file_exists($filename) && class_exists('Turahe\LaravelInstaller\Providers\LaravelInstallerServiceProvider')) {
             $this->app->register(\Turahe\LaravelInstaller\Providers\LaravelInstallerServiceProvider::class);
         }
 

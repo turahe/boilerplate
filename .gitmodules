@@ -13,3 +13,16 @@
 [submodule "packages/turahe/laravel-wallet"]
 	path = packages/turahe/laravel-wallet
 	url = git@github.com:turahe/wallet.git
+[submodule "resources/themes/default"]
+	path = resources/themes/default
+	url = git@github.com:turahe/theme-default.git
+[submodule "resources/themes/market"]
+	path = resources/themes/market
+	url = git@github.com:turahe/theme-market.git
+[submodule "resources/themes/medium"]
+	path = resources/themes/medium
+	url = git@github.com:turahe/theme-medium.git
+[submodule "resources/themes/shopwise"]
+	path = resources/themes/shopwise
+	url = git@github.com:turahe/theme-shopwise.git
+

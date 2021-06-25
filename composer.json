@@ -9,7 +9,9 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
+        "kalnoy/nestedset": "^6.0",
         "laravel-notification-channels/telegram": "^0.5.1",
+        "laravel/cashier": "^13.2",
         "laravel/framework": "^8.40",
         "laravel/passport": "^10.1",
         "laravel/socialite": "^5.2",
@@ -21,7 +23,8 @@
         "spatie/laravel-menu": "^3.7",
         "spatie/laravel-permission": "^4.2",
         "superbalist/laravel-google-cloud-storage": "^2.2",
-        "watson/sitemap": "^4.0"
+        "watson/sitemap": "^4.0",
+        "ext-intl": "*"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
@@ -46,7 +49,8 @@
             "Turahe\\Counters\\": "packages/turahe/laravel-counters/src",
             "Turahe\\LaravelInstaller\\": "packages/turahe/laravel-installer/src",
             "Turahe\\Likeable\\": "packages/turahe/laravel-likeable/src",
-            "Turahe\\Wallet\\": "packages/laravel-wallet/src/"
+            "Turahe\\Store\\": "packages/turahe/store/src/",
+            "Turahe\\Wallet\\": "packages/turahe/laravel-wallet/src/"
         }
     },
     "autoload-dev": {
