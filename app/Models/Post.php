@@ -36,6 +36,96 @@ use Turahe\Likeable\Traits\Likeable;
 use Turahe\Master\Contracts\Sortable;
 use Turahe\Master\Traits\SortableTrait;
 
+/**
+ * App\Models\Post
+ *
+ * @property int $id
+ * @property int|null $parent_id
+ * @property int|null $category_id
+ * @property int $user_id
+ * @property string $slug
+ * @property string $title
+ * @property string|null $subtitle subtitle of title post
+ * @property string|null $description description of post
+ * @property string $content_raw
+ * @property string $content_html
+ * @property string $type
+ * @property int $is_sticky
+ * @property int|null $order_column
+ * @property \Illuminate\Support\Carbon|null $published_at
+ * @property string|null $layout
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Activitylog\Models\Activity[] $activities
+ * @property-read int|null $activities_count
+ * @property-read \App\Models\Category|null $category
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Comment[] $comments
+ * @property-read int|null $comments_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Turahe\Counters\Models\Counter[] $counters
+ * @property-read int|null $counters_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Turahe\Likeable\Models\Like[] $dislikes
+ * @property-read int $dislikes_count
+ * @property-read \Turahe\Likeable\Models\LikeCounter|null $dislikesCounter
+ * @property-read mixed $average_rating
+ * @property-read string $content
+ * @property-read string $cover
+ * @property-read bool $disliked
+ * @property-read mixed|string $excerpt
+ * @property-read bool $liked
+ * @property-read int|null $likes_count
+ * @property-read int $likes_diff_dislikes_count
+ * @property-read ReadTime $read_time
+ * @property-read mixed $sum_rating
+ * @property-read string $url
+ * @property-read mixed $user_average_rating
+ * @property-read mixed $user_sum_rating
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Turahe\Likeable\Models\Like[] $likes
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Turahe\Likeable\Models\Like[] $likesAndDislikes
+ * @property-read int|null $likes_and_dislikes_count
+ * @property-read \Turahe\Likeable\Models\LikeCounter|null $likesCounter
+ * @property-read \Spatie\MediaLibrary\MediaCollections\Models\Collections\MediaCollection|Media[] $media
+ * @property-read int|null $media_count
+ * @property-write mixed $tags
+ * @property-read \App\Models\User $user
+ * @method static \Database\Factories\PostFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post newQuery()
+ * @method static \Illuminate\Database\Query\Builder|Post onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post orderByDislikesCount($direction = 'desc')
+ * @method static \Illuminate\Database\Eloquent\Builder|Post orderByLikesCount($direction = 'desc')
+ * @method static \Illuminate\Database\Eloquent\Builder|Post ordered(string $direction = 'asc')
+ * @method static \Illuminate\Database\Eloquent\Builder|Post popular()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post published()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereCategoryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereContentHtml($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereContentRaw($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereDislikedBy($userId = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereIsSticky($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereLayout($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereLikedBy($userId = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereOrderColumn($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereParentId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post wherePublishedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereSubtitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post whereUserId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post withAllTags($tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post withAllTagsOfAnyType($tags)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post withAnyTags($tags, ?string $type = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Post withAnyTagsOfAnyType($tags)
+ * @method static \Illuminate\Database\Query\Builder|Post withTrashed()
+ * @method static \Illuminate\Database\Query\Builder|Post withoutTrashed()
+ * @mixin \Eloquent
+ */
 class Post extends Model implements HasMedia, Sortable, LikeableContract
 {
     use HasFactory;

@@ -45,6 +45,7 @@
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
             "Database\\Seeders\\": "database/seeders/",
+            "Turahe\\FlashDeal\\": "packages/turahe/flash-deal/src/",
             "Turahe\\Master\\": "packages/turahe/master-data/src",
             "Turahe\\Counters\\": "packages/turahe/laravel-counters/src",
             "Turahe\\LaravelInstaller\\": "packages/turahe/laravel-installer/src",

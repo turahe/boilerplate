@@ -25,4 +25,6 @@
 [submodule "resources/themes/shopwise"]
 	path = resources/themes/shopwise
 	url = git@github.com:turahe/theme-shopwise.git
-
+[submodule "packages/turahe/store"]
+	path = packages/turahe/store
+	url = git@github.com:turahe/store.git

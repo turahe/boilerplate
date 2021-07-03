@@ -25,6 +25,78 @@ use Turahe\Likeable\Traits\Likeable;
 use Turahe\Master\Contracts\Sortable;
 use Turahe\Master\Traits\SortableTrait;
 
+/**
+ * App\Models\Comment
+ *
+ * @property int $id
+ * @property int $user_id
+ * @property int|null $parent_id
+ * @property int|null $order_column
+ * @property string $model_type
+ * @property int $model_id
+ * @property string|null $title
+ * @property string $content
+ * @property \Illuminate\Support\Carbon|null $published_at
+ * @property string $type comment, review ,testimony faq, featured
+ * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Spatie\Activitylog\Models\Activity[] $activities
+ * @property-read int|null $activities_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|Comment[] $children
+ * @property-read int|null $children_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Turahe\Likeable\Models\Like[] $dislikes
+ * @property-read int $dislikes_count
+ * @property-read \Turahe\Likeable\Models\LikeCounter|null $dislikesCounter
+ * @property-read mixed $average_rating
+ * @property-read string $date
+ * @property-read bool $disliked
+ * @property-read Comment $first_child
+ * @property-read bool $liked
+ * @property-read int|null $likes_count
+ * @property-read int $likes_diff_dislikes_count
+ * @property-read string $month
+ * @property-read mixed $publish
+ * @property-read mixed $publish_date
+ * @property-read mixed $publish_time
+ * @property-read Collection $siblings
+ * @property-read mixed $sum_rating
+ * @property-read mixed $user_average_rating
+ * @property-read mixed $user_sum_rating
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Turahe\Likeable\Models\Like[] $likes
+ * @property-read \Illuminate\Database\Eloquent\Collection|\Turahe\Likeable\Models\Like[] $likesAndDislikes
+ * @property-read int|null $likes_and_dislikes_count
+ * @property-read \Turahe\Likeable\Models\LikeCounter|null $likesCounter
+ * @property-read Model|\Eloquent $model
+ * @property-read Comment|null $parent
+ * @property-read \App\Models\User $user
+ * @method static \Database\Factories\CommentFactory factory(...$parameters)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment newQuery()
+ * @method static \Illuminate\Database\Query\Builder|Comment onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment orderByDislikesCount($direction = 'desc')
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment orderByLikesCount($direction = 'desc')
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment ordered(string $direction = 'asc')
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereContent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereDislikedBy($userId = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereLikedBy($userId = null)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereModelId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereModelType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereOrderColumn($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereParentId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment wherePublishedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereType($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Comment whereUserId($value)
+ * @method static \Illuminate\Database\Query\Builder|Comment withTrashed()
+ * @method static \Illuminate\Database\Query\Builder|Comment withoutTrashed()
+ * @mixin \Eloquent
+ */
 class Comment extends Model implements Sortable
 {
     use SoftDeletes;
