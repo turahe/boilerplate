@@ -1,5 +1,5 @@
 {
-    "name": "laravel/laravel",
+    "name": "turahe/boilerplate",
     "type": "project",
     "description": "The Laravel Framework.",
     "keywords": ["framework", "laravel"],
@@ -44,14 +44,7 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/",
-            "Turahe\\FlashDeal\\": "packages/turahe/flash-deal/src/",
-            "Turahe\\Master\\": "packages/turahe/master-data/src",
-            "Turahe\\Counters\\": "packages/turahe/laravel-counters/src",
-            "Turahe\\LaravelInstaller\\": "packages/turahe/laravel-installer/src",
-            "Turahe\\Likeable\\": "packages/turahe/laravel-likeable/src",
-            "Turahe\\Store\\": "packages/turahe/store/src/",
-            "Turahe\\Wallet\\": "packages/turahe/laravel-wallet/src/"
+            "Database\\Seeders\\": "database/seeders/"
         }
     },
     "autoload-dev": {
