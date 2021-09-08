@@ -5,7 +5,8 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^7.3|^8.0",
+        "php": "^7.4|^8.0",
+        "ext-intl": "*",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
@@ -23,8 +24,11 @@
         "spatie/laravel-menu": "^3.7",
         "spatie/laravel-permission": "^4.2",
         "superbalist/laravel-google-cloud-storage": "^2.2",
-        "watson/sitemap": "^4.0",
-        "ext-intl": "*"
+        "turahe/laravel-counters": "dev-master",
+        "turahe/laravel-installer": "dev-master",
+        "turahe/laravel-likeable": "dev-master",
+        "turahe/master-data": "dev-master",
+        "watson/sitemap": "^4.0"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
